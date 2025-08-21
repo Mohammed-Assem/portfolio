@@ -17,3 +17,16 @@ for (let i = 0; i < navlinks.length; i++) {
     navtoggle.classList.toggle("active");
   });
 }
+
+
+const backtop = document.querySelector("[to_top]");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 100) {
+    header.classList.add("active");
+    backtop.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    backtop.classList.remove("active");
+  }
+});
